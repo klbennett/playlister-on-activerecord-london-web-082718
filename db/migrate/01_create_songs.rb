@@ -1,9 +1,8 @@
 class CreateSongs < ActiveRecord::Migration[5.2]
   def change
-    create_table :shows do |t|
-      t.string :name
-      t.string :network
-      t.string :day
-      t.integer :rating
+    create_table :songs do |t|
+      t.belongs_to :artist, index: true
+      t.belongs_to :genre, index: true
+      t.datetime :appointment_date
     end
 end
