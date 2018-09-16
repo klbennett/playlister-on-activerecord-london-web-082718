@@ -2,8 +2,8 @@ class CreateSongs < ActiveRecord::Migration[5.2]
   def change
     create_table :songs do |t|
       t.string :name
-      t.belongs_to :artist, index: true
-      t.belongs_to :genre, index: true
+      t.references :artist, index: true
+      t.references :genre, index: true
     end
 end
 end
