@@ -4,6 +4,5 @@ class CreateSongs < ActiveRecord::Migration[5.2]
       t.string :title
       t.belongs_to :artist, index: true
       t.belongs_to :genre, index: true
-      t.datetime :appointment_date
     end
 end
